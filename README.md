@@ -10,7 +10,5 @@ A Sudoku solve application of Qt5 Widget.
 6. Push "Clear" Button to clear all inputted numbers in the boxes.
 
 ## Screenshot
-<div align=center>
 ![Screenshot](https://raw.githubusercontent.com/Zalafina/QSudokuSolver/master/screenshot/QSudokuSolver.png)
-</div>
 
