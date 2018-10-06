@@ -4,6 +4,11 @@
 #include <QObject>
 #include <QHash>
 
+typedef struct
+{
+    int EntryResult[81];
+}ENTRY_RESULT;
+
 class Solver : public QObject
 {
     Q_OBJECT
@@ -12,6 +17,7 @@ public:
 
 signals:
     void SolveSucceed(void);
+    void InvalidSudokuPuzzle(void);
 
 public slots:
 
@@ -24,6 +30,7 @@ public:
     void ClearSolvedStatus(void);
 
 private:
+    void SolverInit(void);
     void initBoxMap(void);
 
     void CollectInput(const char (&matrix)[9][9]);
@@ -39,6 +46,8 @@ public:
     static QHash<quint32, QString> m_BoxMap;
 
 private:
+    static bool invalid_puzzle;
+
     int InBlock[81], InRow[81], InCol[81];
 
     int Entry[81];  // Records entries 1-9 in the grid, as the corresponding bit set to 1
@@ -51,6 +60,7 @@ private:
     int LevelCount[81];
 
     int SolvedCounter;
+    QList<ENTRY_RESULT> m_EntryResult;
 };
 
 #endif // SOLVER_H

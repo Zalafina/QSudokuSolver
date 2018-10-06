@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QStylePainter>
 #include <QStyleOptionFocusRect>
+#include <QMessageBox>
 
 #include "Solver.h"
 
@@ -21,6 +22,7 @@ public:
 
 public slots:
     void SolveSucceedProc(void);
+    void InvalidSudokuPuzzleProc(void);
 
 private slots:
     void on_SolveButton_clicked();
@@ -30,7 +32,7 @@ private slots:
 private:
     Ui::QSudokuSolver *ui;
     Solver m_Solver;
-    quint8 m_SolvedStatus;
+    bool m_SolvedStatus;
 };
 
 #endif // QSUDOKUSOLVER_H

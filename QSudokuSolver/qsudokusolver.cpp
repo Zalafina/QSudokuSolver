@@ -13,6 +13,7 @@ QSudokuSolver::QSudokuSolver(QWidget *parent) :
     ui->ClearButton->setStyleSheet("color: red");
 
     QObject::connect(&m_Solver, &Solver::SolveSucceed, this,  &QSudokuSolver::SolveSucceedProc);
+    QObject::connect(&m_Solver, &Solver::InvalidSudokuPuzzle, this,  &QSudokuSolver::InvalidSudokuPuzzleProc);
 }
 
 QSudokuSolver::~QSudokuSolver()
@@ -82,6 +83,12 @@ void QSudokuSolver::SolveSucceedProc(void)
     m_SolvedStatus = true;
 }
 
+void QSudokuSolver::InvalidSudokuPuzzleProc(void)
+{
+    m_SolvedStatus = false;
+    QMessageBox::warning(this, tr("QKeyMapper"), tr("<html><head/><body><p align=\"center\">Input invalid Sudoku Puzzle.</p><p align=\"center\">Reinput it please!</p></body></html>"));
+}
+
 void QSudokuSolver::on_SolveButton_clicked()
 {
     //QSudouBox *box = this->findChild<QSudouBox *>("BoxR1C5");
@@ -124,6 +131,7 @@ void QSudokuSolver::on_ClearButton_clicked()
     {
         QSudouBox *box = this->findChild<QSudouBox *>(boxname);
         if (box != nullptr){
+            box->setEnabled(true);
             box->clearall();
         }
         else{
@@ -131,6 +139,7 @@ void QSudokuSolver::on_ClearButton_clicked()
         }
     }
 
+    m_SolvedStatus = false;
     m_Solver.ClearSolvedStatus();
     ui->SolveButton->setStyleSheet("color: royalblue");
     ui->SolveButton->setText("Solve");

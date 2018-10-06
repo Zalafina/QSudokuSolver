@@ -5,14 +5,64 @@
 #include "solver.h"
 
 QHash<quint32, QString> Solver::m_BoxMap = QHash<quint32, QString>();
+bool Solver::invalid_puzzle = false;
 
 static const int BLANK = 0;
 static const int ONES = 0x3fe;   // Binary 1111111110
 
 Solver::Solver(QObject *parent) : QObject(parent)
-,   SeqPtr(0)
-,   Count(0)
-,   SolvedCounter(0)
+{
+    SolverInit();
+
+    initBoxMap();
+}
+
+quint32 Solver::index2row(quint32 index)
+{
+    return (index-1)/9 + 1;
+}
+
+quint32 Solver::index2col(quint32 index)
+{
+    return index - (index-1)/9*9;
+}
+
+void Solver::SudokuSolve(const char (&matrix)[9][9])
+{
+    CollectInput(matrix);
+    Place(SeqPtr);
+
+    if ((1 == SolvedCounter)
+            && (1 == m_EntryResult.size())){
+        emit SolveSucceed();
+    }
+    else{
+#ifdef DEBUG_LOGOUT_ON
+        putc('\n', stdout);
+        printf("Invalid Sudoku Puzzle Input!");
+        fflush(stdout);
+#endif
+        SolverInit();
+        emit InvalidSudokuPuzzle();
+    }
+}
+
+void Solver::GetEntryResult(int *entrybuffer)
+{
+    if (entrybuffer != nullptr){
+        if (1 == m_EntryResult.size()){
+            ENTRY_RESULT result = m_EntryResult.constFirst();
+            memcpy(entrybuffer, result.EntryResult, sizeof(result.EntryResult));
+        }
+    }
+}
+
+void Solver::ClearSolvedStatus()
+{
+    SolverInit();
+}
+
+void Solver::SolverInit(void)
 {
     int i, j, Square;
 
@@ -36,35 +86,11 @@ Solver::Solver(QObject *parent) : QObject(parent)
         Block[i] = Row[i] = Col[i] = ONES;
     }
 
-    initBoxMap();
-}
-
-quint32 Solver::index2row(quint32 index)
-{
-    return (index-1)/9 + 1;
-}
-
-quint32 Solver::index2col(quint32 index)
-{
-    return index - (index-1)/9*9;
-}
-
-void Solver::SudokuSolve(const char (&matrix)[9][9])
-{
-    CollectInput(matrix);
-    Place(SeqPtr);
-}
-
-void Solver::GetEntryResult(int *entrybuffer)
-{
-    if (entrybuffer != nullptr){
-        memcpy(entrybuffer, Entry, sizeof(Entry));
-    }
-}
-
-void Solver::ClearSolvedStatus()
-{
+    SeqPtr = 0;
+    Count = 0;
     SolvedCounter = 0;
+    m_EntryResult.clear();
+    invalid_puzzle = false;
 }
 
 void Solver::initBoxMap(void)
@@ -203,14 +229,25 @@ int Solver::NextSeq(int S)
 
 void Solver::Place(int S)
 {
-    LevelCount[S]++;
     Count++;
+
+    if (Count > 10000){
+        invalid_puzzle = true;
+    }
 
     if (S >= 81) {
         SolvedCounter++;
-        Succeed();
+
+        if (1 == SolvedCounter){
+            Succeed();
+        }
+        else{
+            invalid_puzzle = true;
+        }
         return;
     }
+
+    LevelCount[S]++;
 
     int S2 = NextSeq(S);
     SwapSeqEntries(S, S2);
@@ -222,7 +259,7 @@ void Solver::Place(int S)
             ColIndex = InCol[Square];
 
     int   Possibles = Block[BlockIndex] & Row[RowIndex] & Col[ColIndex];
-    while (Possibles) {
+    while (Possibles && (false == invalid_puzzle)) {
         int valbit = Possibles & (-Possibles); // Lowest 1 bit in Possibles
         Possibles &= ~valbit;
         Entry[Square] = valbit;
@@ -267,11 +304,13 @@ void Solver::PrintStats(void)
 
 void Solver::Succeed(void)
 {
+    ENTRY_RESULT solve_result;
+    memcpy(solve_result.EntryResult, Entry, sizeof(Entry));
+    m_EntryResult.append(solve_result);
+
 #ifdef DEBUG_LOGOUT_ON
     printf("Sudoku Puzzle Solve Complete:");
     PrintArray();
     //PrintStats();
-
-    emit SolveSucceed();
 #endif
 }
