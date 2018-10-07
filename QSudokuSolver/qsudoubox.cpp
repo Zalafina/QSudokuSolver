@@ -81,6 +81,7 @@ void QSudouBox::keyPressEvent(QKeyEvent *keyevent)
         this->setText(str_key);
         break;
     case Qt::Key_0:
+    case Qt::Key_Delete:
         this->clear();
     default:
         break;
