@@ -165,6 +165,7 @@ void Solver::InitEntry(int row, int col, int val)
 
 void Solver::PrintArray(void)
 {
+#ifdef DEBUG_LOGOUT_ON
     int row, col, valbit, val, Square;
     char ch;
 
@@ -195,6 +196,7 @@ void Solver::PrintArray(void)
     }
 
     fflush(stdout);
+#endif
 }
 
 void Solver::SwapSeqEntries(int S1, int S2)
@@ -280,8 +282,8 @@ void Solver::Place(int S)
 
 void Solver::PrintStats(void)
 {
+#ifdef DEBUG_LOGOUT_ON
     int i, S;
-
     printf("\nLevel Counts:\n\n");
 
     S = 0;
@@ -300,6 +302,7 @@ void Solver::PrintStats(void)
     }
 
     printf("\n\nCount = %d\n", Count);
+#endif
 }
 
 void Solver::Succeed(void)
