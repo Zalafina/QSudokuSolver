@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>600</height>
+    <height>650</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>550</width>
-    <height>600</height>
+    <height>650</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>550</width>
-    <height>600</height>
+    <height>650</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -3346,7 +3346,7 @@
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>530</y>
+     <y>580</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -3367,7 +3367,7 @@
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>530</y>
+     <y>580</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -3383,6 +3383,107 @@
    <property name="text">
     <string>Clear</string>
    </property>
+  </widget>
+  <widget class="QComboBox" name="ModeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>520</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <item>
+    <property name="text">
+     <string>Play Sudoku</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Solve Sudoku</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="ModeLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>530</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Mode</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SudokuLabel">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>530</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sudoku</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="PuzzleComboBox">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>520</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <item>
+    <property name="text">
+     <string>Custom</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

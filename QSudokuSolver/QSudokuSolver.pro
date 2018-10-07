@@ -40,11 +40,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES     += main.cpp\
     qsudokusolver.cpp \
     qsudoubox.cpp \
-    solver.cpp
+    solver.cpp \
+    sudokupuzzles.cpp
 
 HEADERS     += qsudokusolver.h \
     qsudoubox.h \
-    solver.h
+    solver.h \
+    sudokupuzzles.h
 
 FORMS       += qsudokusolver.ui
 

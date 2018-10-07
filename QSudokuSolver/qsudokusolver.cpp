@@ -6,14 +6,17 @@ QSudokuSolver::QSudokuSolver(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::QSudokuSolver),
     m_Solver(this),
-    m_SolvedStatus(false)
+    m_SolvedStatus(false),
+    m_Puzzles(this)
 {
     ui->setupUi(this);
     ui->SolveButton->setStyleSheet("color: royalblue");
     ui->ClearButton->setStyleSheet("color: red");
 
-    QObject::connect(&m_Solver, &Solver::SolveSucceed, this,  &QSudokuSolver::SolveSucceedProc);
-    QObject::connect(&m_Solver, &Solver::InvalidSudokuPuzzle, this,  &QSudokuSolver::InvalidSudokuPuzzleProc);
+    QObject::connect(&m_Solver, &Solver::SolveSucceed, this, &QSudokuSolver::SolveSucceedProc);
+    QObject::connect(&m_Solver, &Solver::InvalidSudokuPuzzle, this, &QSudokuSolver::InvalidSudokuPuzzleProc);
+
+    QObject::connect(&m_Puzzles, &SudokuPuzzles::initComplete, this, &QSudokuSolver::PuzzlesInitCompleteProc);
 }
 
 QSudokuSolver::~QSudokuSolver()
@@ -87,6 +90,18 @@ void QSudokuSolver::InvalidSudokuPuzzleProc(void)
 {
     m_SolvedStatus = false;
     QMessageBox::warning(this, tr("QKeyMapper"), tr("<html><head/><body><p align=\"center\">Input invalid Sudoku Puzzle.</p><p align=\"center\">Reinput it please!</p></body></html>"));
+}
+
+void QSudokuSolver::PuzzlesInitCompleteProc(void)
+{
+    int puzzletablesize = m_Puzzles.m_SudokuPuzzleList.size();
+
+    for (int loop = 1; loop <= puzzletablesize; loop++){
+        QString puzzle_number;
+        puzzle_number = QString("%1").arg(loop, 3, 10, QChar('0'));
+        QString combobox_String = QString("Puzzle ") + puzzle_number;
+        ui->PuzzleComboBox->addItem(combobox_String);
+    }
 }
 
 void QSudokuSolver::on_SolveButton_clicked()

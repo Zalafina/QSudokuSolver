@@ -6,7 +6,8 @@
 #include <QStyleOptionFocusRect>
 #include <QMessageBox>
 
-#include "Solver.h"
+#include "solver.h"
+#include "sudokupuzzles.h"
 
 namespace Ui {
 class QSudokuSolver;
@@ -24,6 +25,8 @@ public slots:
     void SolveSucceedProc(void);
     void InvalidSudokuPuzzleProc(void);
 
+    void PuzzlesInitCompleteProc(void);
+
 private slots:
     void on_SolveButton_clicked();
 
@@ -33,6 +36,8 @@ private:
     Ui::QSudokuSolver *ui;
     Solver m_Solver;
     bool m_SolvedStatus;
+
+    SudokuPuzzles m_Puzzles;
 };
 
 #endif // QSUDOKUSOLVER_H
