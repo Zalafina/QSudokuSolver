@@ -19,6 +19,7 @@ public:
     Q_ENUM(BoxType)
 
     void clearall(void);
+    void setpuzzlenumber(void);
 
 protected:
     void focusInEvent(QFocusEvent *ev);

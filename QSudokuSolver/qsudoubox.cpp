@@ -16,6 +16,14 @@ void QSudouBox::clearall()
     this->m_BoxType = BOXTYPE_BLANK;
 }
 
+void QSudouBox::setpuzzlenumber(void)
+{
+    this->setFrameShape(QFrame::WinPanel);
+    this->setFrameShadow(QFrame::Sunken);
+    this->setStyleSheet("background-color: orchid");
+    this->m_BoxType = BOXTYPE_PUZZLE;
+}
+
 void QSudouBox::focusInEvent(QFocusEvent *ev)
 {
 #ifdef DEBUG_LOGOUT_ON

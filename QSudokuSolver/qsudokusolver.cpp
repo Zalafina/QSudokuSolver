@@ -183,23 +183,12 @@ void QSudokuSolver::on_SolveButton_clicked()
 
 void QSudokuSolver::on_ClearButton_clicked()
 {
-    for (const QString &boxname : m_Solver.m_BoxMap)
-    {
-        QSudouBox *box = this->findChild<QSudouBox *>(boxname);
-        if (box != nullptr){
-            box->setEnabled(true);
-            box->clearall();
-        }
-        else{
-            qDebug() << "ClearButton Find BoxName Error:" << boxname;
-        }
+    if (0 == ui->PuzzleComboBox->currentIndex()){
+        on_PuzzleComboBox_currentIndexChanged(0);
     }
-
-    m_SolvedStatus = false;
-    m_Solver.ClearSolvedStatus();
-    ui->SolveButton->setStyleSheet("color: royalblue");
-    ui->SolveButton->setText("Solve");
-    ui->SolveButton->setEnabled(true);
+    else{
+        ui->PuzzleComboBox->setCurrentIndex(0);
+    }
 }
 
 void QSudokuSolver::on_ModeComboBox_currentIndexChanged(const QString &ComboBoxString)
@@ -236,7 +225,7 @@ void QSudokuSolver::on_PuzzleComboBox_currentIndexChanged(int index)
                 box->clearall();
             }
             else{
-                qDebug() << "ChangeMode Find BoxName Error:" << boxname;
+                qDebug() << "on_PuzzleComboBox_currentIndexChanged(0) Find BoxName Error:" << boxname;
             }
         }
 
@@ -244,13 +233,55 @@ void QSudokuSolver::on_PuzzleComboBox_currentIndexChanged(int index)
         m_Solver.ClearSolvedStatus();
         ui->SolveButton->setStyleSheet("color: royalblue");
         ui->SolveButton->setEnabled(true);
+        ui->SolveButton->setText("Solve");
     }
-    else if (index < m_Puzzles.m_SudokuPuzzleList.size()){
+    else if (index <= m_Puzzles.m_SudokuPuzzleList.size()){
 #ifdef DEBUG_LOGOUT_ON
         qDebug() << "Sudoku:" << m_Puzzles.m_SudokuPuzzleList.at(index-1);
 #endif
+        for (const QString &boxname : m_Solver.m_BoxMap)
+        {
+            QSudouBox *box = this->findChild<QSudouBox *>(boxname);
+            if (box != nullptr){
+                box->setEnabled(true);
+                box->setFocusPolicy(Qt::ClickFocus);
+                box->clearall();
+            }
+            else{
+                qDebug() << "on_PuzzleComboBox_currentIndexChanged(0) Find BoxName Error:" << boxname;
+            }
+        }
 
+        m_SolvedStatus = false;
+        m_Solver.ClearSolvedStatus();
 
+        QByteArray sudoku_puzzle = m_Puzzles.m_SudokuPuzzleList.at(index-1);
+
+        for(int index = 1; index <= sudoku_puzzle.size(); index++){
+            int row = Solver::index2row(index);
+            int col = Solver::index2col(index);
+            QString str_row, str_col, box_name;
+            str_row.setNum(row);
+            str_row.prepend(QChar('R'));
+            str_col.setNum(col);
+            str_col.prepend(QChar('C'));
+            box_name = QString("Box") + str_row + str_col;
+
+            //set puzzle number to Box Text
+            QSudouBox *box = this->findChild<QSudouBox *>(box_name);
+            if (box != nullptr){
+                char number = sudoku_puzzle.at(index-1);
+                if (number != '.'){
+                    box->setText(QString(number));
+                    box->setFocusPolicy(Qt::NoFocus);
+                    box->setpuzzlenumber();
+                }
+            }
+            else{
+                qDebug("on_PuzzleComboBox_currentIndexChanged(%d) Find BoxName Error:%s", index, box_name.toStdString().c_str());
+            }
+
+        }
     }
     else{
         qDebug() << "PuzzleComboBox IndexError:" << index;
