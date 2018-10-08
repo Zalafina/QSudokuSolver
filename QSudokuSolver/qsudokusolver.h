@@ -21,6 +21,7 @@ public:
     explicit QSudokuSolver(QWidget *parent = 0);
     ~QSudokuSolver();
 
+    void ChangeMode(const QString &ModeString);
 public slots:
     void SolveSucceedProc(void);
     void InvalidSudokuPuzzleProc(void);
@@ -31,6 +32,10 @@ private slots:
     void on_SolveButton_clicked();
 
     void on_ClearButton_clicked();
+
+    void on_ModeComboBox_currentIndexChanged(const QString &ComboBoxString);
+
+    void on_PuzzleComboBox_currentIndexChanged(int index);
 
 private:
     Ui::QSudokuSolver *ui;

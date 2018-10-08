@@ -10,8 +10,13 @@ QSudokuSolver::QSudokuSolver(QWidget *parent) :
     m_Puzzles(this)
 {
     ui->setupUi(this);
+
     ui->SolveButton->setStyleSheet("color: royalblue");
     ui->ClearButton->setStyleSheet("color: red");
+    ui->CheckButton->setStyleSheet("color: forestgreen");
+    ui->MakeButton->setStyleSheet("color: orchid");
+
+    ChangeMode(QString("Play Sudoku"));
 
     QObject::connect(&m_Solver, &Solver::SolveSucceed, this, &QSudokuSolver::SolveSucceedProc);
     QObject::connect(&m_Solver, &Solver::InvalidSudokuPuzzle, this, &QSudokuSolver::InvalidSudokuPuzzleProc);
@@ -22,6 +27,42 @@ QSudokuSolver::QSudokuSolver(QWidget *parent) :
 QSudokuSolver::~QSudokuSolver()
 {
     delete ui;
+}
+
+void QSudokuSolver::ChangeMode(const QString &ModeString)
+{
+    if (ModeString == QString("Play Sudoku")){
+        ui->SolveButton->setVisible(false);
+        ui->ClearButton->setVisible(false);
+
+        ui->CheckButton->setVisible(true);
+        ui->MakeButton->setVisible(true);
+        ui->CheckButton->setText("Check");
+        ui->MakeButton->setText("Make");
+
+        if (0 == ui->PuzzleComboBox->currentIndex()){
+            on_PuzzleComboBox_currentIndexChanged(0);
+        }
+        else{
+            ui->PuzzleComboBox->setCurrentIndex(0);
+        }
+    }
+    else if (ModeString == QString("Solve Sudoku")){
+        ui->CheckButton->setVisible(false);
+        ui->MakeButton->setVisible(false);
+
+        ui->SolveButton->setVisible(true);
+        ui->ClearButton->setVisible(true);
+        ui->SolveButton->setText("Solve");
+        ui->ClearButton->setText("Clear");
+
+        if (0 == ui->PuzzleComboBox->currentIndex()){
+            on_PuzzleComboBox_currentIndexChanged(0);
+        }
+        else{
+            ui->PuzzleComboBox->setCurrentIndex(0);
+        }
+    }
 }
 
 void QSudokuSolver::SolveSucceedProc(void)
@@ -159,4 +200,59 @@ void QSudokuSolver::on_ClearButton_clicked()
     ui->SolveButton->setStyleSheet("color: royalblue");
     ui->SolveButton->setText("Solve");
     ui->SolveButton->setEnabled(true);
+}
+
+void QSudokuSolver::on_ModeComboBox_currentIndexChanged(const QString &ComboBoxString)
+{
+    if (ComboBoxString == QString("Play Sudoku")){
+#ifdef DEBUG_LOGOUT_ON
+        qDebug() << "Mode Changed:" << ComboBoxString;
+#endif
+
+        ChangeMode(ComboBoxString);
+    }
+    else if (ComboBoxString == QString("Solve Sudoku")){
+#ifdef DEBUG_LOGOUT_ON
+        qDebug() << "Mode Changed:" << ComboBoxString;
+#endif
+
+        ChangeMode(ComboBoxString);
+    }
+}
+
+void QSudokuSolver::on_PuzzleComboBox_currentIndexChanged(int index)
+{
+#ifdef DEBUG_LOGOUT_ON
+    qDebug() << "PuzzleComboBox IndexChanged:" << index;
+#endif
+
+    if (0 == index){
+        for (const QString &boxname : m_Solver.m_BoxMap)
+        {
+            QSudouBox *box = this->findChild<QSudouBox *>(boxname);
+            if (box != nullptr){
+                box->setEnabled(true);
+                box->setFocusPolicy(Qt::ClickFocus);
+                box->clearall();
+            }
+            else{
+                qDebug() << "ChangeMode Find BoxName Error:" << boxname;
+            }
+        }
+
+        m_SolvedStatus = false;
+        m_Solver.ClearSolvedStatus();
+        ui->SolveButton->setStyleSheet("color: royalblue");
+        ui->SolveButton->setEnabled(true);
+    }
+    else if (index < m_Puzzles.m_SudokuPuzzleList.size()){
+#ifdef DEBUG_LOGOUT_ON
+        qDebug() << "Sudoku:" << m_Puzzles.m_SudokuPuzzleList.at(index-1);
+#endif
+
+
+    }
+    else{
+        qDebug() << "PuzzleComboBox IndexError:" << index;
+    }
 }
