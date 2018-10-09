@@ -59,11 +59,13 @@ void QSudokuSolver::SolveSucceedProc(void)
         SolveModeSolveSucceed();
     }
     else{
-        if ((SUDOKUMODE_SOLVE == m_SudokuMode)
+        if ((SUDOKUMODE_PLAY == m_SudokuMode)
                 && (PUZZLE_CUSTOM == ui->PuzzleComboBox->currentIndex())
                 && (false == m_CustomPuzzleMaked)){
             m_CustomPuzzleMaked = true;
             MakeButtonDisable();
+            ClearButtonEnable();
+            CheckButtonEnable();
         }
         else{
             bool checkresult = PlayModeSolveSucceed();
@@ -342,7 +344,6 @@ void QSudokuSolver::MakeButtonDisable(void)
     ui->MakeButton->setEnabled(false);
     ui->MakeButton->setStyleSheet("color: darkgray");
     ui->MakeButton->setVisible(false);
-    ui->ClearButton->setVisible(true);
 }
 
 void QSudokuSolver::SolveButtonEnable(void)
@@ -357,6 +358,16 @@ void QSudokuSolver::SolveButtonDisable(void)
     ui->SolveButton->setEnabled(false);
     ui->SolveButton->setStyleSheet("color: darkgray");
     ui->SolveButton->setText("Solved");
+}
+
+void QSudokuSolver::ClearButtonDisable()
+{
+    ui->ClearButton->setVisible(false);
+}
+
+void QSudokuSolver::ClearButtonEnable()
+{
+    ui->ClearButton->setVisible(true);
 }
 
 bool QSudokuSolver::CheckPuzzleInput(void)

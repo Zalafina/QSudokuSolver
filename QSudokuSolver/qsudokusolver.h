@@ -62,6 +62,8 @@ private:
     void MakeButtonDisable(void);
     void SolveButtonEnable(void);
     void SolveButtonDisable(void);
+    void ClearButtonDisable(void);
+    void ClearButtonEnable(void);
 
     bool CheckPuzzleInput(void);
     bool PlayModeSolveSucceed(void);
