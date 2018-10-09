@@ -1,8 +1,10 @@
 #include <QDebug>
 #include "qsudoubox.h"
+#include "ui_qsudokusolver.h"
 
 QSudouBox::QSudouBox(QWidget *parent) : QLabel(parent)
   , m_BoxType(BOXTYPE_BLANK)
+  , parent_ptr(dynamic_cast<QSudokuSolver*>(parent))
 {
 
 }
@@ -41,16 +43,43 @@ void QSudouBox::focusOutEvent(QFocusEvent *ev)
     //qDebug() << "focusOutEvent:" << this->objectName() << ":" << "FocusReason:" << ev->reason();
 #endif
     Q_UNUSED(ev);
-    if (true == this->text().isEmpty()){
-        this->setFrameShape(QFrame::StyledPanel);
-        this->setFrameShadow(QFrame::Plain);
-        this->setStyleSheet("background-color:");
+
+    if (QSudokuSolver::SUDOKUMODE_PLAY == parent_ptr->m_SudokuMode){
+        if (true == this->text().isEmpty()){
+            this->setFrameShape(QFrame::StyledPanel);
+            this->setFrameShadow(QFrame::Plain);
+            this->setStyleSheet("background-color:");
+
+            this->m_BoxType = BOXTYPE_BLANK;
+        }
+        else{
+            if (((0 == parent_ptr->GetUI()->PuzzleComboBox->currentIndex())
+                 &&(true == parent_ptr->m_CustomPuzzleMaked))
+                    ||(0 != parent_ptr->GetUI()->PuzzleComboBox->currentIndex())){
+                this->setFrameShape(QFrame::StyledPanel);
+                this->setFrameShadow(QFrame::Plain);
+                this->setStyleSheet("background-color:");
+
+                this->m_BoxType = BOXTYPE_FILL;
+            }
+            else{
+                this->setStyleSheet("background-color: orchid");
+                this->m_BoxType = BOXTYPE_PUZZLE;
+            }
+        }
+    }
+    else{ /* QSudokuSolver::SUDOKUMODE_SOLVE == QSudokuSolver::m_SudokuMode */
+        if (true == this->text().isEmpty()){
+            this->setFrameShape(QFrame::StyledPanel);
+            this->setFrameShadow(QFrame::Plain);
+            this->setStyleSheet("background-color:");
         this->m_BoxType = BOXTYPE_BLANK;
     }
     else{
         this->setStyleSheet("background-color: orchid");
         this->m_BoxType = BOXTYPE_PUZZLE;
     }
+}
 }
 
 #if 0

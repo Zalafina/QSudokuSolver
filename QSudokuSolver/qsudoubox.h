@@ -6,6 +6,8 @@
 #include <QStylePainter>
 #include <QStyleOptionFocusRect>
 
+#include "qsudokusolver.h"
+
 class QSudouBox : public QLabel
 {
 public:
@@ -15,6 +17,7 @@ public:
     {
         BOXTYPE_BLANK = 0U,
         BOXTYPE_PUZZLE,
+        BOXTYPE_FILL,
     };
     Q_ENUM(BoxType)
 
@@ -29,6 +32,9 @@ protected:
 
 public:
     quint32 m_BoxType;
+
+private:
+    QSudokuSolver *parent_ptr;
 };
 
 #endif // QSUDOUBOX_H

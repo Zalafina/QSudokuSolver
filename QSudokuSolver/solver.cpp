@@ -7,6 +7,7 @@
 QHash<quint32, QString> Solver::m_BoxMap = QHash<quint32, QString>();
 bool Solver::invalid_puzzle = false;
 
+static const int SOLVE_COUNT_MAX = 5000000;
 static const int BLANK = 0;
 static const int ONES = 0x3fe;   // Binary 1111111110
 
@@ -39,7 +40,7 @@ void Solver::SudokuSolve(const char (&matrix)[9][9])
     else{
 #ifdef DEBUG_LOGOUT_ON
         putc('\n', stdout);
-        printf("Invalid Sudoku Puzzle Input!");
+        printf("Invalid Sudoku Puzzle Input!\n");
         fflush(stdout);
 #endif
         SolverInit();
@@ -233,7 +234,7 @@ void Solver::Place(int S)
 {
     Count++;
 
-    if (Count > 10000){
+    if (Count > SOLVE_COUNT_MAX){
         invalid_puzzle = true;
     }
 
@@ -312,7 +313,7 @@ void Solver::Succeed(void)
     m_EntryResult.append(solve_result);
 
 #ifdef DEBUG_LOGOUT_ON
-    printf("Sudoku Puzzle Solve Complete:");
+    printf("Sudoku Puzzle Solve Complete:Count(%d)", Count);
     PrintArray();
     //PrintStats();
 #endif
