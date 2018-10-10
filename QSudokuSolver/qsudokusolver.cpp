@@ -259,6 +259,7 @@ void QSudokuSolver::on_PuzzleComboBox_currentIndexChanged(int index)
         CheckButtonEnable();
         SolveButtonEnable();
         MakeButtonDisable();
+        ClearButtonEnable();
 
         QByteArray sudoku_puzzle = m_Puzzles.m_SudokuPuzzleList.at(index-1);
 
