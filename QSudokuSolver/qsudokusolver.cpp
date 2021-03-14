@@ -1,15 +1,16 @@
-#include <QDebug>
+﻿#include <QDebug>
+#include <string.h>
 #include "qsudokusolver.h"
 #include "ui_qsudokusolver.h"
 
 QSudokuSolver::QSudokuSolver(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::QSudokuSolver),
-    m_CustomPuzzleMaked(false),
-    m_SudokuMode(SUDOKUMODE_PLAY),
     m_Solver(this),
     m_SolvedStatus(false),
-    m_Puzzles(this)
+    m_Puzzles(this),
+    m_CustomPuzzleMaked(false),
+    m_SudokuMode(SUDOKUMODE_PLAY)
 {
     ui->setupUi(this);
 

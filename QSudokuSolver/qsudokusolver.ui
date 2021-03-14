@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
-    <height>650</height>
+    <width>400</width>
+    <height>649</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>550</width>
-    <height>650</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -34,10 +34,10 @@
   <widget class="QSudouBox" name="BoxR1C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>20</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -73,10 +73,10 @@
   <widget class="QSudouBox" name="BoxR1C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>60</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -112,10 +112,10 @@
   <widget class="QSudouBox" name="BoxR1C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>100</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -151,10 +151,10 @@
   <widget class="QSudouBox" name="BoxR1C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>140</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -190,10 +190,10 @@
   <widget class="QSudouBox" name="BoxR1C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>180</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -229,10 +229,10 @@
   <widget class="QSudouBox" name="BoxR1C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>220</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -268,10 +268,10 @@
   <widget class="QSudouBox" name="BoxR1C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>300</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -307,10 +307,10 @@
   <widget class="QSudouBox" name="BoxR1C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>260</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -346,10 +346,10 @@
   <widget class="QSudouBox" name="BoxR1C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>340</x>
      <y>50</y>
-     <width>50</width>
-     <height>50</height>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -385,10 +385,10 @@
   <widget class="QSudouBox" name="BoxR2C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -424,10 +424,10 @@
   <widget class="QSudouBox" name="BoxR2C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -463,10 +463,10 @@
   <widget class="QSudouBox" name="BoxR2C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -502,10 +502,10 @@
   <widget class="QSudouBox" name="BoxR2C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -541,10 +541,10 @@
   <widget class="QSudouBox" name="BoxR2C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -580,10 +580,10 @@
   <widget class="QSudouBox" name="BoxR2C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -619,10 +619,10 @@
   <widget class="QSudouBox" name="BoxR2C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -658,10 +658,10 @@
   <widget class="QSudouBox" name="BoxR2C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -697,10 +697,10 @@
   <widget class="QSudouBox" name="BoxR2C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>100</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>90</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -736,10 +736,10 @@
   <widget class="QSudouBox" name="BoxR3C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -775,10 +775,10 @@
   <widget class="QSudouBox" name="BoxR3C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -814,10 +814,10 @@
   <widget class="QSudouBox" name="BoxR3C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -853,10 +853,10 @@
   <widget class="QSudouBox" name="BoxR3C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -892,10 +892,10 @@
   <widget class="QSudouBox" name="BoxR3C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -931,10 +931,10 @@
   <widget class="QSudouBox" name="BoxR3C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -970,10 +970,10 @@
   <widget class="QSudouBox" name="BoxR3C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1009,10 +1009,10 @@
   <widget class="QSudouBox" name="BoxR3C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1048,10 +1048,10 @@
   <widget class="QSudouBox" name="BoxR3C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>150</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>130</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1087,10 +1087,10 @@
   <widget class="QSudouBox" name="BoxR4C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1126,10 +1126,10 @@
   <widget class="QSudouBox" name="BoxR4C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1165,10 +1165,10 @@
   <widget class="QSudouBox" name="BoxR4C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1204,10 +1204,10 @@
   <widget class="QSudouBox" name="BoxR4C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1243,10 +1243,10 @@
   <widget class="QSudouBox" name="BoxR4C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1282,10 +1282,10 @@
   <widget class="QSudouBox" name="BoxR4C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1321,10 +1321,10 @@
   <widget class="QSudouBox" name="BoxR4C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1360,10 +1360,10 @@
   <widget class="QSudouBox" name="BoxR4C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1399,10 +1399,10 @@
   <widget class="QSudouBox" name="BoxR4C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>200</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>170</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1438,10 +1438,10 @@
   <widget class="QSudouBox" name="BoxR5C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1477,10 +1477,10 @@
   <widget class="QSudouBox" name="BoxR5C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1516,10 +1516,10 @@
   <widget class="QSudouBox" name="BoxR5C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1555,10 +1555,10 @@
   <widget class="QSudouBox" name="BoxR5C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1594,10 +1594,10 @@
   <widget class="QSudouBox" name="BoxR5C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1633,10 +1633,10 @@
   <widget class="QSudouBox" name="BoxR5C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1672,10 +1672,10 @@
   <widget class="QSudouBox" name="BoxR5C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1711,10 +1711,10 @@
   <widget class="QSudouBox" name="BoxR5C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1750,10 +1750,10 @@
   <widget class="QSudouBox" name="BoxR5C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>250</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>210</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1789,10 +1789,10 @@
   <widget class="QSudouBox" name="BoxR6C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1828,10 +1828,10 @@
   <widget class="QSudouBox" name="BoxR6C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1867,10 +1867,10 @@
   <widget class="QSudouBox" name="BoxR6C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1906,10 +1906,10 @@
   <widget class="QSudouBox" name="BoxR6C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1945,10 +1945,10 @@
   <widget class="QSudouBox" name="BoxR6C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -1984,10 +1984,10 @@
   <widget class="QSudouBox" name="BoxR6C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2023,10 +2023,10 @@
   <widget class="QSudouBox" name="BoxR6C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2062,10 +2062,10 @@
   <widget class="QSudouBox" name="BoxR6C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2101,10 +2101,10 @@
   <widget class="QSudouBox" name="BoxR6C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>300</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>250</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2140,10 +2140,10 @@
   <widget class="QSudouBox" name="BoxR7C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2179,10 +2179,10 @@
   <widget class="QSudouBox" name="BoxR7C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2218,10 +2218,10 @@
   <widget class="QSudouBox" name="BoxR7C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2257,10 +2257,10 @@
   <widget class="QSudouBox" name="BoxR7C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2296,10 +2296,10 @@
   <widget class="QSudouBox" name="BoxR7C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2335,10 +2335,10 @@
   <widget class="QSudouBox" name="BoxR7C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2374,10 +2374,10 @@
   <widget class="QSudouBox" name="BoxR7C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2413,10 +2413,10 @@
   <widget class="QSudouBox" name="BoxR7C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2452,10 +2452,10 @@
   <widget class="QSudouBox" name="BoxR7C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>350</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>290</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2491,10 +2491,10 @@
   <widget class="QSudouBox" name="BoxR8C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2530,10 +2530,10 @@
   <widget class="QSudouBox" name="BoxR8C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2569,10 +2569,10 @@
   <widget class="QSudouBox" name="BoxR8C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2608,10 +2608,10 @@
   <widget class="QSudouBox" name="BoxR8C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2647,10 +2647,10 @@
   <widget class="QSudouBox" name="BoxR8C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2686,10 +2686,10 @@
   <widget class="QSudouBox" name="BoxR8C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2725,10 +2725,10 @@
   <widget class="QSudouBox" name="BoxR8C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2764,10 +2764,10 @@
   <widget class="QSudouBox" name="BoxR8C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2803,10 +2803,10 @@
   <widget class="QSudouBox" name="BoxR8C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>400</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>330</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2842,10 +2842,10 @@
   <widget class="QSudouBox" name="BoxR9C1">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>20</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2881,10 +2881,10 @@
   <widget class="QSudouBox" name="BoxR9C5">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>180</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2920,10 +2920,10 @@
   <widget class="QSudouBox" name="BoxR9C4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>140</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2959,10 +2959,10 @@
   <widget class="QSudouBox" name="BoxR9C6">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>220</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -2998,10 +2998,10 @@
   <widget class="QSudouBox" name="BoxR9C2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>60</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3037,10 +3037,10 @@
   <widget class="QSudouBox" name="BoxR9C3">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>100</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3076,10 +3076,10 @@
   <widget class="QSudouBox" name="BoxR9C8">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>300</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3115,10 +3115,10 @@
   <widget class="QSudouBox" name="BoxR9C9">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>340</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3154,10 +3154,10 @@
   <widget class="QSudouBox" name="BoxR9C7">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>450</y>
-     <width>50</width>
-     <height>50</height>
+     <x>260</x>
+     <y>370</y>
+     <width>40</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -3193,10 +3193,10 @@
   <widget class="Line" name="VerticalLine_3">
    <property name="geometry">
     <rect>
-     <x>341</x>
+     <x>251</x>
      <y>50</y>
      <width>19</width>
-     <height>450</height>
+     <height>361</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -3212,10 +3212,10 @@
   <widget class="Line" name="VerticalLine_2">
    <property name="geometry">
     <rect>
-     <x>191</x>
+     <x>131</x>
      <y>50</y>
      <width>19</width>
-     <height>450</height>
+     <height>361</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -3231,9 +3231,9 @@
   <widget class="Line" name="HorizontalLine_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>191</y>
-     <width>450</width>
+     <x>20</x>
+     <y>160</y>
+     <width>361</width>
      <height>19</height>
     </rect>
    </property>
@@ -3250,9 +3250,9 @@
   <widget class="Line" name="HorizontalLine_3">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>341</y>
-     <width>450</width>
+     <x>20</x>
+     <y>280</y>
+     <width>361</width>
      <height>19</height>
     </rect>
    </property>
@@ -3269,10 +3269,10 @@
   <widget class="Line" name="VerticalLine_1">
    <property name="geometry">
     <rect>
-     <x>41</x>
+     <x>11</x>
      <y>50</y>
      <width>19</width>
-     <height>450</height>
+     <height>361</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -3288,10 +3288,10 @@
   <widget class="Line" name="VerticalLine_4">
    <property name="geometry">
     <rect>
-     <x>491</x>
+     <x>371</x>
      <y>50</y>
      <width>19</width>
-     <height>450</height>
+     <height>361</height>
     </rect>
    </property>
    <property name="frameShadow">
@@ -3307,9 +3307,9 @@
   <widget class="Line" name="HorizontalLine_1">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>20</x>
      <y>41</y>
-     <width>450</width>
+     <width>361</width>
      <height>19</height>
     </rect>
    </property>
@@ -3326,9 +3326,9 @@
   <widget class="Line" name="HorizontalLine_4">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>491</y>
-     <width>450</width>
+     <x>20</x>
+     <y>400</y>
+     <width>361</width>
      <height>19</height>
     </rect>
    </property>
@@ -3345,8 +3345,8 @@
   <widget class="QPushButton" name="SolveButton">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>580</y>
+     <x>30</x>
+     <y>550</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -3366,8 +3366,8 @@
   <widget class="QPushButton" name="ClearButton">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>580</y>
+     <x>220</x>
+     <y>550</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -3387,8 +3387,8 @@
   <widget class="QComboBox" name="ModeComboBox">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>520</y>
+     <x>70</x>
+     <y>460</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -3396,7 +3396,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>11</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="focusPolicy">
@@ -3416,16 +3416,16 @@
   <widget class="QLabel" name="ModeLabel">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>530</y>
-     <width>54</width>
+     <x>20</x>
+     <y>470</y>
+     <width>41</width>
      <height>12</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>12</pointsize>
+     <pointsize>10</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -3440,8 +3440,8 @@
   <widget class="QLabel" name="SudokuLabel">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>530</y>
+     <x>190</x>
+     <y>470</y>
      <width>54</width>
      <height>12</height>
     </rect>
@@ -3449,7 +3449,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>12</pointsize>
+     <pointsize>10</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -3464,8 +3464,8 @@
   <widget class="QComboBox" name="PuzzleComboBox">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>520</y>
+     <x>250</x>
+     <y>460</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -3473,7 +3473,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>11</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="focusPolicy">
@@ -3488,8 +3488,8 @@
   <widget class="QPushButton" name="CheckButton">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>580</y>
+     <x>30</x>
+     <y>550</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -3509,8 +3509,8 @@
   <widget class="QPushButton" name="MakeButton">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>580</y>
+     <x>220</x>
+     <y>550</y>
      <width>151</width>
      <height>41</height>
     </rect>

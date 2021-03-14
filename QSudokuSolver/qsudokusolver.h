@@ -1,4 +1,4 @@
-#ifndef QSUDOKUSOLVER_H
+﻿#ifndef QSUDOKUSOLVER_H
 #define QSUDOKUSOLVER_H
 
 #include <QWidget>
@@ -69,15 +69,15 @@ private:
     bool PlayModeSolveSucceed(void);
     void SolveModeSolveSucceed(void);
 
-public:
-    bool m_CustomPuzzleMaked;
-    int m_SudokuMode;
-
 private:
     Ui::QSudokuSolver *ui;
     Solver m_Solver;
     bool m_SolvedStatus;
     SudokuPuzzles m_Puzzles;
+
+public:
+    bool m_CustomPuzzleMaked;
+    int m_SudokuMode;
 };
 
 #endif // QSUDOKUSOLVER_H
